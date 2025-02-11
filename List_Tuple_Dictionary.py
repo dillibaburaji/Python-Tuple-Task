@@ -62,3 +62,21 @@ for num in my_list:
         happy_number_list.append(num) 
 print(happy_number_list)
 print("In Given list happy number is ", len(happy_number_list))
+
+""""4. Write a python program to find the sum of the first and last digit of an integer?""""
+
+def first_digit(n): # Function for first digit of a number
+    while n >= 10:  # this loop Keep dividing until we get the first digit
+        n = n // 10
+    return n        
+             
+def last_digit(n):   # Function for last digit of a number
+    return n % 10  
+
+print("Please enter an integer number:") # Take user input
+number = int(input())  # Convert input to an integer
+
+first = first_digit(number)
+last = last_digit(number)
+sum_of_first_last_digit = first + last
+print("Sum of first and last digit:", sum_of_first_last_digit)
