@@ -42,7 +42,7 @@ print("Prime Numbers:", prime_numbers)
 print("Count of Prime Numbers:", prime_count)
 
 
-"""Given a Python List [10, 501, 22, 37, 100, 999, 87, 351] 
+"""3.Given a Python List [10, 501, 22, 37, 100, 999, 87, 351] 
 Find out how many numbers are there in the given Python List which are Happy Numbers ?
 """
 def happy_num(n):   
