@@ -40,3 +40,25 @@ prime_count = len(prime_numbers) # Count the number of prime numbers
 
 print("Prime Numbers:", prime_numbers)
 print("Count of Prime Numbers:", prime_count)
+
+
+"""Given a Python List [10, 501, 22, 37, 100, 999, 87, 351] 
+Find out how many numbers are there in the given Python List which are Happy Numbers ?
+"""
+def happy_num(n):   
+    rem =0
+    sum =0
+    while (n > 0):    #square each digit
+        rem = n%10    
+        sum = sum + (rem*rem)    
+        n = n//10
+    return sum == 1   #if sum reach 1 it is happpy number
+        
+    
+my_list = [10, 501, 22, 37, 100, 999, 82, 87, 351] #given list
+happy_number_list =[]
+for num in my_list:
+    if happy_num(num):
+        happy_number_list.append(num) 
+print(happy_number_list)
+print("In Given list happy number is ", len(happy_number_list))
