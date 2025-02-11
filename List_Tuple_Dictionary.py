@@ -80,3 +80,19 @@ first = first_digit(number)
 last = last_digit(number)
 sum_of_first_last_digit = first + last
 print("Sum of first and last digit:", sum_of_first_last_digit)
+
+"""
+6. You have been given three lists. 
+Your task is to find the duplicates in the three lists. Write a python program for the same. You can use your own python lists ?
+"""
+def find_duplicate_list(L1,L2,L3):
+    duplicate_list=[]      # List to store duplicate elements
+    for i in L1:
+            if i in L2 and i in L3 and i not in duplicate_list:   # Check if the item is present in all three lists and not already added
+                duplicate_list.append(i)     #adding duplicate element 
+    return duplicate_list
+
+first_list=[10,20,30]
+second_list=[12,21,34,30]
+third_list=[10,20,30,44,44]
+print(find_duplicate_list(first_list,second_list,third_list)) 
