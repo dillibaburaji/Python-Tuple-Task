@@ -96,3 +96,23 @@ first_list=[10,20,30]
 second_list=[12,21,34,30]
 third_list=[10,20,30,44,44]
 print(find_duplicate_list(first_list,second_list,third_list)) 
+
+"""7.Write a python program to find the first non repeating elements in a given list of integers?"""
+
+def first_non_repeating(non_rep):
+    
+    non_repeating_count = {} # Dictionary to store occurrences and duplication not allowed
+    
+    for ele in non_rep:
+        if ele in non_repeating_count:    
+            non_repeating_count[ele]+=1    # Increment count if already in dictionary
+        else:
+            non_repeating_count[ele]=1       #for first occurrences
+        
+    for ele in non_rep:
+        if non_repeating_count[ele]==1:
+            return ele              # Return first non-repeating element
+
+python_list = [10,20,20,20,30,30,4,40]
+print(first_non_repeating(python_list))
+
