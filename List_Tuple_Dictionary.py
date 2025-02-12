@@ -98,7 +98,6 @@ third_list=[10,20,30,44,44]
 print(find_duplicate_list(first_list,second_list,third_list)) 
 
 """7.Write a python program to find the first non repeating elements in a given list of integers?"""
-
 def first_non_repeating(non_rep):
     
     non_repeating_count = {} # Dictionary to store occurrences and duplication not allowed
@@ -116,3 +115,18 @@ def first_non_repeating(non_rep):
 python_list = [10,20,20,20,30,30,4,40]
 print(first_non_repeating(python_list))
 
+
+"""8. Write a python program to find the minimum element in a rated and sorted list ?"""
+def find_minimum_ele_list(list_ele):
+    if not list_ele:   # checking for empty list
+        return None
+    minimum_ele_in_list = list_ele[0] # Assume first element is the minimum
+    
+    for ele in list_ele:
+        if ele < minimum_ele_in_list:   
+            minimum_ele_in_list = ele    # Update if a smaller element is found in the list
+    return minimum_ele_in_list   #return the minimum element in the list
+
+python_list = [10,20,30,1,30,4,5,5,3]
+
+print("minimum ele in list",(find_minimum_ele_list(python_list)))
